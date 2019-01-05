@@ -5,6 +5,8 @@ const app = express()
 
 app.use(express.urlencoded({ extended: true }))
 
+app.use(express.static("public"))
+
 app.get('/', (req, res, next) => {
     res.sendFile(__dirname + "/signup.html")
 })
