@@ -18,12 +18,4 @@ app.post('/', (req, res, next) => {
     console.log(`${firstname} ${lastname} ${email}`)
 })
 
-let server = app.listen(3000, () => {
-    console.log('Server is running on port: 3000')
-})
-
-function stop() {
-    server.close()
-}
-
-module.exports = server
+module.exports = app

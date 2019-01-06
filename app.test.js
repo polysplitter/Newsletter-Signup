@@ -1,13 +1,8 @@
 const request = require('supertest')
-let server;
+let app = require('./app')
 
-beforeEach(() => {
-    server = require('./app')
-})
-afterEach(() => {
-    server.stop()
-})
-
-test('It should response the GET Method', done => {
-    request(server).get('/').expect(200, done)
+describe('app returns 200 on get to /', () => {
+    it('Should respond with the GET method', done => {
+        request(app).get('/').expect(200, done)
+    })
 })
