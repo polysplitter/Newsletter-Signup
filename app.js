@@ -37,7 +37,7 @@ app.post('/', (req, res, next) => {
         headers: {
             "Authorization": `kyle ${config.key}`
         },
-        // body: jsonData
+        body: jsonData
     }
 
     request(options, (error, response, body) => {
