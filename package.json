@@ -1,7 +1,7 @@
 {
   "name": "Newsletter-Signup",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "server.js",
   "repository": "git@github.com:polysplitter/Newsletter-Signup.git",
   "author": "Kyle <polysplitter@gmail.com>",
   "license": "MIT",
