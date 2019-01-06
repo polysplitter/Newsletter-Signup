@@ -1,5 +1,6 @@
 const express = require('express')
 const request = require('request')
+const config = require('./config')
 
 const app = express()
 
