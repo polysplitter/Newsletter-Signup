@@ -37,7 +37,7 @@ app.post('/', (req, res, next) => {
         headers: {
             "Authorization": `kyle ${config.key}`
         },
-        body: jsonData
+        // body: jsonData
     }
 
     request(options, (error, response, body) => {
@@ -51,6 +51,11 @@ app.post('/', (req, res, next) => {
             }
         }
     })
+})
+
+// allow for retry
+app.post('/failure', (req, res, next) => {
+    res.redirect('/')
 })
 
 module.exports = app
