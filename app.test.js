@@ -1,11 +1,13 @@
-const request = require('request')
-const app = require('./app.js')
+const request = require('supertest')
+let server;
 
-describe('test root path', () => {
-    it('It should response the GET Method', (done) => {
-        request('/', (error, response, body) => {
-            expect(response.statusCode).toBe(200)
-            done()
-        })
-    })
+beforeEach(() => {
+    server = require('./app')
+})
+afterEach(() => {
+    server.stop()
+})
+
+test('It should response the GET Method', done => {
+    request(server).get('/').expect(200, done)
 })
